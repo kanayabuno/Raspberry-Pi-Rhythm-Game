@@ -1,0 +1,25 @@
+Kana Yabuno
+
+File list: main.py, gesture_pred.py, collect_data.py, and other files
+
+main.py:
+The main script that is used for gesture detection. It calls the function from gesture_pred.py that returns the output of the gesture detection and send the data to MQTT broker iteratively. MQTT implementation is done on this script.
+I used this GitHub page for MQTT implementation.
+
+gesture_pred.py:
+A Python script that reads raw data from IMU and detect gestures using the decision tree implemented.
+Outputs that a function returns to main.py is as follows,
+1: Chop
+2: Rotation
+3: Slow Chop
+4: Slow Rotation
+-100: UNIDENTIFIED
+
+collect_data.py:
+This script was originally used to collect IMU output data for analysis. Later, it was modified for testing. It writes the output of the decision tree to .csv for each time a certain gesture is performed.
+
+Other files:
+The rest of files are used for IMU reading.
+
+
+As a future improvement, we could add more gestures to this and simplify the codes.

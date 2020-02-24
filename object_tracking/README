@@ -1,0 +1,21 @@
+Kana Yabuno
+
+File list: main.cpp, mosquitto.cpp, mosquitto.h, Makefile, README 
+
+main.cpp:
+It contains a main function which uses images of webcam to detect one colored objects, calculate the location of objects in (x,y) coordinates, and send the location to Mosquitto broker.
+I modified a sample code from Kyle Hounslow(https://www.youtube.com/watch?v=bSeFrPrqZ2A).
+	
+mosquitto.cpp:
+Implementation of Mosquitto broker class.
+It initializes the class, subscribes to Mosquitto broker, and publish(send messages) to a specific broker. 
+I used a sample code from this websites(https://www.disk91.com/2013/technology/programming/mosquitto-c-sample-code-to-publish-message/).
+
+mosquitto.h:
+A header file for mosquitto.cpp. It declares mosquitto class and its functions.
+
+Makefile:
+Makefile for running.
+
+README:
+This file that contains information about all the files.
